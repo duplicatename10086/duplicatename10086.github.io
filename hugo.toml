@@ -1,0 +1,143 @@
+# -----------------------------------------------------------------------------
+# 站点基础配置
+# 当前 GitHub 用户名：duplicatename10086（仓库名需为 duplicatename10086.github.io）。
+# -----------------------------------------------------------------------------
+baseURL = 'https://duplicatename10086.github.io/'
+locale = 'zh-cn'
+defaultContentLanguage = 'zh-cn'
+title = 'Xuan'
+theme = 'PaperMod'
+
+enableRobotsTXT = true
+enableEmoji = true
+hasCJKLanguage = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableGitInfo = false
+
+[pagination]
+  pagerSize = 6
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+  section = ['HTML', 'RSS']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    codeFences = true
+    guessSyntax = true
+
+[params]
+  env = 'production'
+  description = 'Xuan 的个人博客，记录代码、阅读与生活。'
+  author = 'Xuan'
+  defaultTheme = 'auto'
+  DateFormat = '2006 年 1 月 2 日'
+
+  # 文章页与列表页
+  ShowReadingTime = true
+  ShowWordCount = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = true
+  disableScrollToTop = false
+  disableAnchoredHeadings = false
+  hidemeta = false
+  hideSummary = false
+  comments = false
+  showtoc = true
+  tocopen = false
+  mainSections = ['posts']
+
+  # 默认社交分享图（放在 static/images/og.png）
+  images = ['images/og.png']
+
+  # 左上角品牌：头像 + 文字
+  [params.label]
+    text = 'XUAN'
+    icon = 'images/avatar.svg'
+    iconHeight = 30
+
+  [params.assets]
+    favicon = '/favicon.svg'
+    favicon16x16 = '/favicon-16x16.png'
+    favicon32x32 = '/favicon-32x32.png'
+    apple_touch_icon = '/apple-touch-icon.png'
+    safari_pinned_tab = '/favicon.svg'
+    theme_color = '#0f172a'
+    msapplication_TileColor = '#0f172a'
+
+  [params.cover]
+    responsiveImages = true
+    linkFullImages = false
+
+  [params.homeInfoParams]
+    Title = '你好，我是 Xuan 👋'
+    AlignSocialIconsTo = 'left'
+    Content = '''
+这里是我的数字花园 —— 记录 **代码**、**阅读** 与 **生活** 里值得留下来的东西。
+
+最近在折腾 Hugo、GitHub Pages，以及一些关于产品和设计的小想法。写得不快，但会认真对待每一篇。
+
+> 把想法写下来，是让它们变清晰的第一步。
+'''
+
+  [params.footer]
+    text = '保持好奇，持续记录。'
+
+  # 首页社交图标
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/duplicatename10086'
+  [[params.socialIcons]]
+    name = 'rss'
+    url = '/index.xml'
+
+  # 站内搜索（Fuse.js）
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 1
+    limit = 10
+    keys = ['title', 'permalink', 'summary', 'content']
+
+# -----------------------------------------------------------------------------
+# 导航菜单
+# -----------------------------------------------------------------------------
+[[menus.main]]
+  name = '文章'
+  url = '/posts/'
+  weight = 10
+
+[[menus.main]]
+  name = '归档'
+  url = '/archives/'
+  weight = 20
+
+[[menus.main]]
+  name = '标签'
+  url = '/tags/'
+  weight = 30
+
+[[menus.main]]
+  name = '搜索'
+  url = '/search/'
+  weight = 40
+
+[[menus.main]]
+  name = '关于'
+  url = '/about/'
+  weight = 50

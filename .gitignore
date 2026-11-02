@@ -1,0 +1,14 @@
+# 构建产物与本地缓存
+public/
+resources/_gen/
+.hugo_build.lock
+hugo_stats.json
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~

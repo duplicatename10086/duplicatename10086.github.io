@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Xuan avatar">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="0.55" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="x" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#c7d2fe" stop-opacity="0.9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.2" cy="0.1" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" rx="96" fill="#0b1020"/>
+  <rect width="400" height="400" rx="96" fill="url(#bg)" opacity="0.92"/>
+  <rect width="400" height="400" rx="96" fill="url(#glow)"/>
+  <g fill="none" stroke="url(#x)" stroke-width="46" stroke-linecap="round">
+    <path d="M124 124 L276 276"/>
+    <path d="M276 124 L124 276" opacity="0.92"/>
+  </g>
+  <circle cx="200" cy="200" r="152" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+  <circle cx="322" cy="78" r="9" fill="#a5f3fc"/>
+</svg>
