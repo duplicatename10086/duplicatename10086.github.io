@@ -14,39 +14,31 @@
 
 ---
 
-## 1. 最快上线：用 GitHub Desktop
+## 1. 日常发布：用 GitHub Desktop
 
-### 1.1 在 GitHub 建仓库
+这个仓库已经创建并上线，不需要再新建：
 
-打开 <https://github.com/new>：
+- 仓库：<https://github.com/duplicatename10086/duplicatename10086.github.io>
+- 站点：<https://duplicatename10086.github.io/>
+- Pages 的 Source 已设为 **GitHub Actions**，每次 push 到 `main` 会自动构建发布。
 
-- **Repository name** 填 `duplicatename10086.github.io`
-  - 只有仓库名和用户名完全一致，站点才是 `https://duplicatename10086.github.io/`
-  - 如果叫 `blog`，地址会变成 `https://duplicatename10086.github.io/blog/`
-- 选择 **Public**
-  - GitHub Pages 免费版只对公开仓库开放
-- 不要勾选 “Add a README file”，本地已经有内容了
-- 点 **Create repository**
+### 1.1 在这台电脑打开
 
-### 1.2 用 GitHub Desktop 推上去
-
-1. 打开 GitHub Desktop，登录你的 GitHub 账号。
+1. 打开 GitHub Desktop，登录 `duplicatename10086`。
 2. 菜单 **File → Add Local Repository…**
-3. 选择这个 `xuan-blog` 文件夹（里面已经有 `.git`）。
-4. 左下角 Summary 填 `init blog`，点 **Commit to main**。
-5. 点顶部的 **Publish repository**。
-6. 仓库名填 `duplicatename10086.github.io`，**取消勾选 “Keep this code private”**，发布。
+3. 选择 `D:\xuan-blog-session\xuan-blog`（里面已有 `.git` 和远程地址）。
+4. 如果左侧历史记录能看到 `init blog`，说明仓库已接上，不用再点 Publish。
 
-### 1.3 打开 Pages
+### 1.2 发布一篇新文章
 
-回到 GitHub 仓库页面：
+1. 改 `content/posts/` 里的 Markdown，或按第 2 节在网页上写。
+2. 回到 GitHub Desktop，左下角 Summary 填一句说明（如 `new post`）。
+3. 点 **Commit to main**。
+4. 点顶部 **Push origin**。
+5. 打开仓库的 **Actions**，等 `Deploy Hugo site to Pages` 变绿，约 1 分钟。
+6. 刷新 <https://duplicatename10086.github.io/>。
 
-1. **Settings → Pages**
-2. **Build and deployment → Source** 选择 **GitHub Actions**
-3. 打开 **Actions** 标签，应该能看到 `Deploy Hugo site to Pages` 正在跑
-4. 等 1～2 分钟，绿色勾出现后访问 <https://duplicatename10086.github.io/>
-
-以后每次 `git push` 到 `main`，都会自动重新构建和发布。
+> 如果换电脑：在 GitHub Desktop 里用 **File → Clone repository** 克隆这个仓库，不要再用 “Add Local Repository” 指向不存在的本地目录。
 
 ---
 
